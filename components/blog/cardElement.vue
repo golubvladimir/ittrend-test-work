@@ -7,7 +7,7 @@
       {{ content }}
     </b-card-text>
 
-    <nuxt-link class="card__link" :to="id">Подробнее</nuxt-link>
+    <nuxt-link class="card__link" :to="'/posts/'+id">Подробнее</nuxt-link>
   </b-card>
 </template>
 
