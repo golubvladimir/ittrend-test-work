@@ -2,7 +2,7 @@
   <b-container class="contacts">
     <b-row>
       <b-col cols="12">
-        <title-element label="1">Контакты</title-element>
+        <title-element label="1">{{ title[lang] }}</title-element>
         <p class="contacts__address">
           {{ address[lang] }}
         </p>
