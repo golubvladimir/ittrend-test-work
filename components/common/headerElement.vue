@@ -1,6 +1,8 @@
 <template>
   <b-navbar variant="faded" type="light">
-    <b-navbar-brand tag="h1" class="mb-0">Blog on Nuxt.js</b-navbar-brand>
+    <nuxt-link to="/">
+      <b-navbar-brand tag="h1" class="mb-0">Blog on Nuxt.js</b-navbar-brand>
+    </nuxt-link>
     <b-navbar-nav>
       <nuxt-link class='nav-link' to="/posts">Блог</nuxt-link>
       <nuxt-link class='nav-link' to="/about">Об авторе</nuxt-link>
