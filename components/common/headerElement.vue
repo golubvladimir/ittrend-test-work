@@ -5,9 +5,9 @@
       <nuxt-link class='nav-link' to="/posts">Блог</nuxt-link>
       <nuxt-link class='nav-link' to="/about">Об авторе</nuxt-link>
       <nuxt-link class='nav-link' to="/contacts">Контакты</nuxt-link>
-      <select>
-        <option>Ru</option>
-        <option>En</option>
+      <select style="width: 50px" @change="changeLang">
+        <option selected value="ru">Ru</option>
+        <option value="en">En</option>
       </select>
     </b-navbar-nav>
   </b-navbar>
@@ -15,8 +15,12 @@
 
 <script>
   export default {
-      name: "headerElement",
-
+    name: "headerElement",
+    methods: {
+      changeLang(event) {
+        this.$store.dispatch('changeLang', {lang: event.target.value});
+      }
+    }
   }
 </script>
 
