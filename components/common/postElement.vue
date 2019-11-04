@@ -7,18 +7,31 @@
       {{ content }}
     </b-card-text>
 
-    <nuxt-link class="card__link" :to="'/posts/'+id">Подробнее</nuxt-link>
+    <nuxt-link class="card__link" :to="'/posts/'+id">{{ linkTitle[lang] }}</nuxt-link>
   </b-card>
 </template>
 
 <script>
   export default {
     name: "cardElement",
+    data: function() {
+      return {
+        linkTitle: {
+          ru: 'Подробнее',
+          en: 'More'
+        }
+      }
+    },
     props: {
       id: String,
       title: String,
       content: String,
-    }
+    },
+    computed: {
+      lang() {
+        return this.$store.state.lang
+      }
+    },
   }
 </script>
 
