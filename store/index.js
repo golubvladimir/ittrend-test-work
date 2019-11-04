@@ -43,6 +43,7 @@ const store = () => new Vuex.Store({
               amet congue nulla pharetra nec. Duis porttitor 
               egestas ante eu tristique. Maecenas sit 
               amet volutpat diam, a.`
+        }
       }
     ],
     currentPost: {}
