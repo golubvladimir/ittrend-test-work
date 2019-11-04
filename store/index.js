@@ -9,21 +9,40 @@ const store = () => new Vuex.Store({
     posts: [
       {
         id: '1',
-        title: 'Пост 1',
-        content: `Lorem ipsum dolor sit amet, consectetur 
-                  adipiscing elit. Fusce tempor velit justo, sit 
-                  amet congue nulla pharetra nec. Duis porttitor 
-                  egestas ante eu tristique. Maecenas sit 
-                  amet volutpat diam, a.`
+        title: {
+          ru: 'Пост 1',
+          en: 'News 1'
+        },
+        content: {
+          ru: `Но явные признаки победы институционализации будут преданы 
+              социально-демократической анафеме. И нет сомнений, что сделанные
+              на базе интернет-аналитики выводы и по сей день остаются 
+              уделом либералов, которые жаждут быть подвергнуты
+          целой серии независимых исследований.`,
+          en: `Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Fusce tempor velit justo, sit 
+              amet congue nulla pharetra nec. Duis porttitor 
+              egestas ante eu tristique. Maecenas sit 
+              amet volutpat diam, a.`,
+        }
       },
       {
         id: '2',
-        title: 'Пост 2',
-        content: `Lorem ipsum dolor sit amet, consectetur 
-                  adipiscing elit. Fusce tempor velit justo, sit 
-                  amet congue nulla pharetra nec. Duis porttitor 
-                  egestas ante eu tristique. Maecenas sit 
-                  amet volutpat diam, a.`
+        title: {
+          ru: 'Пост 2',
+          en: 'News 2'
+        },
+        content: {
+          ru: `Но явные признаки победы институционализации будут преданы 
+              социально-демократической анафеме. И нет сомнений, что сделанные
+              на базе интернет-аналитики выводы и по сей день остаются 
+              уделом либералов, которые жаждут быть подвергнуты
+              целой серии независимых исследований.`,
+          en: `Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Fusce tempor velit justo, sit 
+              amet congue nulla pharetra nec. Duis porttitor 
+              egestas ante eu tristique. Maecenas sit 
+              amet volutpat diam, a.`
       }
     ],
     currentPost: {}
