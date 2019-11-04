@@ -2,9 +2,9 @@
   <b-container class="post">
     <b-row>
       <b-col cols="12">
-        <title-element label="1">{{ post.title }}</title-element>
+        <title-element label="1">{{ post.title[lang] }}</title-element>
         <p>
-          {{ post.content }}
+          {{ post.content[lang] }}
         </p>
       </b-col>
     </b-row>
@@ -17,8 +17,8 @@
   export default {
     name: "blog-id",
     computed: {
-      route() {
-        return ''
+      lang() {
+        return this.$store.state.lang
       }
     },
     computed: {
