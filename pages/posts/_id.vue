@@ -19,9 +19,7 @@
     computed: {
       lang() {
         return this.$store.state.lang
-      }
-    },
-    computed: {
+      },
       post() {
         return this.$store.state.currentPost
       }
