@@ -2,17 +2,11 @@
   <b-container class="blog">
     <b-row>
       <b-col cols="12">
-        <title-element>Блог</title-element>
-        <div class="blog__list">
-          <card-element
-            class="blog__item"
-            v-for="post in posts"
-            :key="post.id"
-            :id="post.id"
-            :title="post.title"
-            :content="post.content"
-          />
-        </div>
+        <title-element label="1">{{ title[lang] }}</title-element>
+        <posts-list
+          :lang="lang"
+          :posts="posts"
+        />
       </b-col>
     </b-row>
   </b-container>
@@ -20,30 +14,33 @@
 
 <script>
   import titleElement from '~/components/elements/titleElement';
-  import cardElement from '~/components/blog/cardElement';
+  import postsList from '~/components/common/postsList';
 
   export default {
     name: "blog",
+    data: function () {
+      return {
+        title: {
+          ru: 'Блог',
+          en: 'Blog'
+        }
+      }
+    },
     components: {
-      cardElement,
-      titleElement
+      titleElement,
+      postsList
     },
     computed: {
       posts() {
         return this.$store.state.posts
+      },
+      lang() {
+        return this.$store.state.lang
       }
-    }
+    },
   }
 </script>
 
 <style lang="scss" scoped>
-  .blog {
-    &__item {
-      margin-bottom: 20px;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
 </style>
