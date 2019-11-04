@@ -10,7 +10,7 @@
 
 <script>
     export default {
-        name: "footerElement"
+      name: "footerElement"
     }
 </script>
 
