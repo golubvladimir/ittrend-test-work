@@ -21,7 +21,8 @@ module.exports = {
   ** Plugins
   */
   plugins: [
-    '~plugins/bootstrap-vue'
+    '~plugins/bootstrap-vue',
+    {src: '~/plugins/vuex-persistedstate', ssr: false}
   ],
   /*
   ** Build configuration
