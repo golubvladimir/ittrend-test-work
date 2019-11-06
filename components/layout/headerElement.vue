@@ -12,9 +12,18 @@
       >
         {{ link.title[lang] }}
       </nuxt-link>
-      <select style="width: 50px" @change="changeLang">
-        <option selected value="ru">Ru</option>
-        <option value="en">En</option>
+      <select
+        style="width: 50px"
+        @change="changeLang"
+        v-model="lang"
+      >
+        <option
+          v-for="item in langs"
+          :key="item.id"
+          :value="item.value"
+        >
+          {{ item.value }}
+        </option>
       </select>
     </b-navbar-nav>
   </b-navbar>
@@ -25,6 +34,16 @@
     name: "headerElement",
     data: function () {
       return {
+        langs: [
+          {
+            id: 1,
+            value: 'ru'
+          },
+          {
+            id: 2,
+            value: 'en'
+          }
+        ],
         links: [
           {
             id: '1',
