@@ -1,6 +1,16 @@
-# vueblog
+# ITTrend test work
 
-> Nuxt.js project
+It was my first experience with NuxtJS
+
+## Description task
+
+### Russian
+
+Создать тестовый блог
+
+### English
+
+Create test blog
 
 ## Build Setup
 
