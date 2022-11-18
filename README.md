@@ -12,6 +12,14 @@ It was my first experience with NuxtJS
 
 Create test blog
 
+## Packages
+
+[bootstrap-vue](https://github.com/bootstrap-vue/bootstrap-vue)
+
+[nuxt](https://github.com/nuxt/nuxt.js)
+
+[vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
+
 ## Build Setup
 
 ``` bash
